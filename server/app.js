@@ -50,7 +50,6 @@ app.post("/api/people", (req, res) => {
     });
   });
 });
-res.send("Welcome to my API");
 app.listen(5000, () => {
   console.log("Server listening on port 5000");
 });
