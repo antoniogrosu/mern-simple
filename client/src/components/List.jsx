@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 function List() {
   const [people, setPeople] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/api/people")
+    fetch("https://mern-simple-backend.vercel.app/api/people")
       .then((res) => res.json())
       .then((data) => setPeople(data))
       .catch((error) => {
