@@ -6,7 +6,7 @@ function App() {
   const [currentName, setCurrentName] = useState("");
   const submitForm = (event) => {
     const newPerson = { name: currentName };
-    fetch("https://mern-simple-backend.vercel.app/api/people", {
+    fetch("http://localhost:5000/api/people", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
