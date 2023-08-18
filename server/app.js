@@ -4,7 +4,12 @@ const app = express();
 const fs = require("fs");
 const cors = require("cors");
 
-app.use(cors()); //cross origin for the frontend
+app.use(cors(
+  {
+    origin : ["https://mern-client-two.vercel.app/"],
+    methods : ["GET" , "POST"]
+  }
+)); //cross origin for the frontend
 app.use(express.json());
 
 app.get("/api/people", (req, res) => {
